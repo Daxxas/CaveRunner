@@ -1583,4 +1583,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52fd9da6325cceb4384bca6c32a07450, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileRoomType: {fileID: 11400000, guid: 75609faca537a80498731d4d9aaeda4e, type: 2}
+  tileRoomType: {fileID: 11400000, guid: 42a43b81404030d4790fd9ae72d6c76c, type: 2}

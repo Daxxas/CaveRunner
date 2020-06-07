@@ -7,17 +7,10 @@ using UnityEngine.Tilemaps;
 
 public class DaxDungeonGenerator : MonoBehaviour
 {
-    private List<TileRoom> tileRooms;
     private Tilemap mainTilemap;
     
-    public GameObject roomTest;
-    private TileRoom roomTileRoom;
-
-    public BoundsInt area;
-
     void Start()
     {
-        roomTileRoom = roomTest.GetComponent<TileRoom>();
         mainTilemap = GetComponent<Tilemap>();
         
         /*

@@ -10,7 +10,7 @@ public class RoomPatron : MonoBehaviour
 {
     public TileRoomType patronRoomType;
     
-    private List<GameObject> tileRooms;
+    private List<GameObject> tileRooms = new List<GameObject>();
 
     private GameObject mainMapGO;
     private Grid mainGrid;
@@ -34,8 +34,8 @@ public class RoomPatron : MonoBehaviour
     public void GenerateRoom()
     {
         int rand = Random.Range(0, tileRooms.Count);
-
-;       dungeonGenerator.placeTileRoom(GetPatronGridPos(),  tileRooms[rand].GetComponent<TileRoom>());
+        
+;       dungeonGenerator.placeTileRoom(GetPatronGridPos(), tileRooms[rand].GetComponent<TileRoom>());
     }
     
     private void OnDrawGizmos()

@@ -67,15 +67,11 @@
      <Compile Include="Assets\Scripts\DaxController\PlayerState.cs" />
      <Compile Include="Assets\Scripts\DaxController\RaycastController.cs" />
      <Compile Include="Assets\Scripts\DaxDungeonGenerator\DaxDungeonGenerator.cs" />
-     <Compile Include="Assets\Scripts\DaxDungeonGenerator\Generator\GenLayout\GenLayout.cs" />
-     <Compile Include="Assets\Scripts\DaxDungeonGenerator\Generator\GenLayout\GenLayoutInterface.cs" />
-     <Compile Include="Assets\Scripts\DaxDungeonGenerator\Generator\GenLayout\GenLayoutType.cs" />
-     <Compile Include="Assets\Scripts\DaxDungeonGenerator\Generator\PackRoom\PackRoom.cs" />
-     <Compile Include="Assets\Scripts\DaxDungeonGenerator\Generator\PackRoom\PackRoomType.cs" />
+     <Compile Include="Assets\Scripts\DaxDungeonGenerator\Generator\PackRoom\GenLayout.cs" />
+     <Compile Include="Assets\Scripts\DaxDungeonGenerator\Generator\PackRoom\GenLayoutType.cs" />
      <Compile Include="Assets\Scripts\DaxDungeonGenerator\Generator\Room\TileRoom.cs" />
      <Compile Include="Assets\Scripts\DaxDungeonGenerator\Generator\Room\TileRoomType.cs" />
-     <Compile Include="Assets\Scripts\DaxDungeonGenerator\Patrons\LayoutPatron\GenLayoutPatron.cs" />
-     <Compile Include="Assets\Scripts\DaxDungeonGenerator\Patrons\PackRoomPatron\PackRoomPatron.cs" />
+     <Compile Include="Assets\Scripts\DaxDungeonGenerator\Patrons\PackRoomPatron\GenLayoutPatron.cs" />
      <Compile Include="Assets\Scripts\DaxDungeonGenerator\Patrons\RoomPatron\RoomPatron.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>G:/UnityProjects/AngelRunner/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

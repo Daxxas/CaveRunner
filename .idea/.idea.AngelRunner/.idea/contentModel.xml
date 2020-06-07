@@ -93,10 +93,9 @@
       <e p="Assets" t="Include">
         <e p="Editor" t="Include">
           <e p="DaxDungeonGeneratorEditor.cs" t="Include" />
-          <e p="PackRoomTypeEditor.cs" t="Include" />
+          <e p="GenLayoutTypeEditor.cs" t="Include" />
           <e p="PatronEditor.cs" t="Include" />
           <e p="PatronGenLayoutEditor.cs" t="Include" />
-          <e p="PatronPackRoomEditor.cs" t="Include" />
           <e p="TileRoomEditor.cs" t="Include" />
           <e p="TileRoomTypeEditor.cs" t="Include" />
         </e>
@@ -114,14 +113,9 @@
           <e p="DaxDungeonGenerator" t="Include">
             <e p="DaxDungeonGenerator.cs" t="Include" />
             <e p="Generator" t="Include">
-              <e p="GenLayout" t="Include">
-                <e p="GenLayout.cs" t="Include" />
-                <e p="GenLayoutInterface.cs" t="Include" />
-                <e p="GenLayoutType.cs" t="Include" />
-              </e>
               <e p="PackRoom" t="Include">
-                <e p="PackRoom.cs" t="Include" />
-                <e p="PackRoomType.cs" t="Include" />
+                <e p="GenLayout.cs" t="Include" />
+                <e p="GenLayoutType.cs" t="Include" />
               </e>
               <e p="Room" t="Include">
                 <e p="TileRoom.cs" t="Include" />
@@ -129,11 +123,8 @@
               </e>
             </e>
             <e p="Patrons" t="Include">
-              <e p="LayoutPatron" t="Include">
-                <e p="GenLayoutPatron.cs" t="Include" />
-              </e>
               <e p="PackRoomPatron" t="Include">
-                <e p="PackRoomPatron.cs" t="Include" />
+                <e p="GenLayoutPatron.cs" t="Include" />
               </e>
               <e p="RoomPatron" t="Include">
                 <e p="RoomPatron.cs" t="Include" />

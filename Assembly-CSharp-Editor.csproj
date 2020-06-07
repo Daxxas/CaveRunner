@@ -59,10 +59,9 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Editor\DaxDungeonGeneratorEditor.cs" />
-     <Compile Include="Assets\Editor\PackRoomTypeEditor.cs" />
+     <Compile Include="Assets\Editor\GenLayoutTypeEditor.cs" />
      <Compile Include="Assets\Editor\PatronEditor.cs" />
      <Compile Include="Assets\Editor\PatronGenLayoutEditor.cs" />
-     <Compile Include="Assets\Editor\PatronPackRoomEditor.cs" />
      <Compile Include="Assets\Editor\TileRoomEditor.cs" />
      <Compile Include="Assets\Editor\TileRoomTypeEditor.cs" />
  <Reference Include="UnityEditor.TestRunner">

@@ -1,18 +1,22 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
-public class PatronGenLayoutEditor : MonoBehaviour
+[CustomEditor(typeof(GenLayoutPatron))]
+public class PatronGenLayoutEditor : Editor
 {
-    // Start is called before the first frame update
-    void Start()
+    
+    public override void OnInspectorGUI()
     {
-        
-    }
+        base.OnInspectorGUI();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        GenLayoutPatron genLayoutPatron = (GenLayoutPatron) target;
+
+        if (GUILayout.Button("Generate Layout")) 
+        {
+            genLayoutPatron.GenerateLayout();
+        }
     }
 }
