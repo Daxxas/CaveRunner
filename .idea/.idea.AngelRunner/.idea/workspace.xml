@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f0a5ab9f-86d9-4ff5-9bb1-b39c9a2345c6" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/AngelRunner" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DaxDungeonGenerator/Generator/PackRoom/PackRoom.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DaxDungeonGenerator/DaxDungeonGenerator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DaxDungeonGenerator/Generator/Room/TileRoomType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DaxDungeonGenerator/Generator/GenLayout/GenLayoutInterface.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Editor/PatronEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DaxDungeonGenerator/Generator/PackRoom/PackRoomType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Editor/DaxDungeonGeneratorEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DaxDungeonGenerator/Patrons/RoomPatron/RoomPatron.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DaxDungeonGenerator/Generator/Room/TileRoom.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DaxController/CameraFollow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Editor/TileRoomTypeEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DaxController/RaycastController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Editor/PackRoomTypeEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DaxController/PlatformController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DaxDungeonGenerator/Patrons/PackRoomPatron/PackRoomPatron.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DaxDungeonGenerator/Patrons/LayoutPatron/GenLayoutPatron.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Editor/TileRoomEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DaxController/PlayerState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Editor/PatronPackRoomEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DaxDungeonGenerator/Generator/GenLayout/GenLayout.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DaxController/PlayerInputEvents.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Scripts/DaxController/PlayerInputEvents.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DaxController/RaycastController.cs" />
+        <option value="$PROJECT_DIR$/Assets/RoomGizmoDebug.cs" />
+        <option value="$PROJECT_DIR$/Assets/TileRoom.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DaxDungeonGenerator/CorridorTileRoom.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DaxDungeonGenerator/TileRoom.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DaxDungeonGenerator/Room/CorridorScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DaxDungeonGenerator/Room/TileRoomScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DaxDungeonGenerator/Room/TileRoomScriptableObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DaxDungeonGenerator/Room/ALLOJETEST.cs" />
+        <option value="$PROJECT_DIR$/Assets/Editor/TileRoomEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Editor/PatronEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DaxDungeonGenerator/mainMainRef.cs" />
+        <option value="$PROJECT_DIR$/Assets/Editor/DaxDungeonGeneratorEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DaxDungeonGenerator/mainDungeonReferences.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/RoomTypes/RoomTypeNames.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DaxDungeonGenerator/DaxDungeonGenerator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DaxDungeonGenerator/Patron/Patron.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DaxDungeonGenerator/RoomPatron/RoomPatron.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DaxDungeonGenerator/PackRoom/PackRoomType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DaxDungeonGenerator/PackRoom/PackRoom.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DaxDungeonGenerator/PackRoom/PackRoomTypeNames.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DaxDungeonGenerator/Room/TileRoom.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DaxDungeonGenerator/Room/TileRoomType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DaxDungeonGenerator/Room/RoomTypeNames.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DaxDungeonGenerator/Generator/Room/RoomTypeNames.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DaxDungeonGenerator/Generator/Room/TypeNameExtension.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DaxDungeonGenerator/Generator/PackRoom/PackRoomTypeNames.cs" />
+        <option value="$PROJECT_DIR$/Assets/Editor/TileRoomTypeEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DaxDungeonGenerator/Generator/PackRoom/PackRoom.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DaxDungeonGenerator/Generator/Room/TileRoomType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DaxDungeonGenerator/Generator/PackRoom/PackRoomType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DaxDungeonGenerator/TypeNameExtension.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DaxDungeonGenerator/Patrons/RoomPatron/RoomPatron.cs" />
+        <option value="$PROJECT_DIR$/Assets/Editor/PatronPackRoomEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DaxDungeonGenerator/Patrons/PackRoomPatron/PackRoomPatron.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DaxDungeonGenerator/Patrons/LayoutPatron/LayoutPatron.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DaxDungeonGenerator/Generator/Layout/LayoutType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DaxDungeonGenerator/Generator/Layout/Layout.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DaxDungeonGenerator/Generator/Layout/GenLayoutType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DaxDungeonGenerator/Generator/Layout/GenLayout.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DaxDungeonGenerator/Generator/GenLayout/GenLayoutInterface.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DaxDungeonGenerator/Generator/Room/TileRoom.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DaxDungeonGenerator/Patrons/LayoutPatron/GenLayoutPatron.cs" />
+        <option value="$PROJECT_DIR$/Assets/Editor/PackRoomTypeEditor.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1cpA1Xc89nI4JeOFJzscSTJCVel" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TWShift.4" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="CodeLensConfigurable" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f0a5ab9f-86d9-4ff5-9bb1-b39c9a2345c6" name="Default Changelist" comment="" />
+      <created>1591214948631</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1591214948631</updated>
+      <workItem from="1591214959415" duration="1603000" />
+      <workItem from="1591291299115" duration="8063000" />
+      <workItem from="1591380421899" duration="127000" />
+      <workItem from="1591382866342" duration="467000" />
+      <workItem from="1591384063068" duration="3676000" />
+      <workItem from="1591438750995" duration="27951000" />
+      <workItem from="1591521262560" duration="13087000" />
+      <workItem from="1591559142054" duration="1889000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="WindowStateProjectService">
+    <state x="-1813" y="260" key="SettingsEditor" timestamp="1591441589164">
+      <screen x="-1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="-1813" y="260" key="SettingsEditor/0.0.1920.1080/-1920.0.1920.1080/1920.240.1920.1040@-1920.0.1920.1080" timestamp="1591441589164" />
+  </component>
+</project>

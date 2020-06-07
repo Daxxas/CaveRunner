@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Program Files\UnityEditor\Packages\2d-extras-master\Editor\Brushes\CoordinateBrush" t="Include">
+      <e p="CoordinateBrush.cs" t="Include" />
+    </e>
+    <e p="C:\Program Files\UnityEditor\Packages\2d-extras-master\Editor\Brushes\GameObjectBrush" t="Include">
+      <e p="GameObjectBrush.cs" t="Include" />
+    </e>
+    <e p="C:\Program Files\UnityEditor\Packages\2d-extras-master\Editor\Brushes\GroupBrush" t="Include">
+      <e p="GroupBrush.cs" t="Include" />
+    </e>
+    <e p="C:\Program Files\UnityEditor\Packages\2d-extras-master\Editor\Brushes\LineBrush" t="Include">
+      <e p="LineBrush.cs" t="Include" />
+    </e>
+    <e p="C:\Program Files\UnityEditor\Packages\2d-extras-master\Editor\Brushes\PrefabBrushes" t="Include">
+      <e p="BasePrefabBrush.cs" t="Include" />
+      <e p="PrefabBrush" t="Include">
+        <e p="PrefabBrush.cs" t="Include" />
+      </e>
+      <e p="PrefabRandomBrush" t="Include">
+        <e p="PrefabRandomBrush.cs" t="Include" />
+      </e>
+    </e>
+    <e p="C:\Program Files\UnityEditor\Packages\2d-extras-master\Editor\Brushes\RandomBrush" t="Include">
+      <e p="RandomBrush.cs" t="Include" />
+    </e>
+    <e p="C:\Program Files\UnityEditor\Packages\2d-extras-master\Editor\Brushes\TintBrush" t="Include">
+      <e p="TintBrush.cs" t="Include" />
+    </e>
+    <e p="C:\Program Files\UnityEditor\Packages\2d-extras-master\Editor\Brushes\TintBrushSmooth" t="Include">
+      <e p="TintBrushSmooth.cs" t="Include" />
+    </e>
+    <e p="C:\Program Files\UnityEditor\Packages\2d-extras-master\Editor\Tiles\HexagonalRuleTile" t="Include">
+      <e p="HexagonalRuleTileEditor.cs" t="Include" />
+    </e>
+    <e p="C:\Program Files\UnityEditor\Packages\2d-extras-master\Editor\Tiles\IsometricRuleTile" t="Include">
+      <e p="IsometricRuleTileEditor.cs" t="Include" />
+    </e>
+    <e p="C:\Program Files\UnityEditor\Packages\2d-extras-master\Editor\Tiles\RuleOverrideTile" t="Include">
+      <e p="AdvancedRuleOverrideTileEditor.cs" t="Include" />
+      <e p="PopulateRuleOverrideTileWizard.cs" t="Include" />
+      <e p="RuleOverrideTileEditor.cs" t="Include" />
+    </e>
+    <e p="C:\Program Files\UnityEditor\Packages\2d-extras-master\Editor\Tiles\RuleTile" t="Include">
+      <e p="CustomRuleTileMenu.cs" t="Include" />
+      <e p="RuleTileEditor.cs" t="Include" />
+      <e p="ScriptTemplates" t="Include">
+        <e p="NewCustomRuleTile.cs.txt" t="Include" />
+      </e>
+    </e>
+    <e p="C:\Program Files\UnityEditor\Packages\2d-extras-master\Runtime\Brushes" t="Include">
+      <e p="TintedTilemap.shader" t="Include" />
+      <e p="TintTextureGenerator.cs" t="Include" />
+    </e>
+    <e p="C:\Program Files\UnityEditor\Packages\2d-extras-master\Runtime\GridInformation" t="Include">
+      <e p="GridInformation.cs" t="Include" />
+    </e>
+    <e p="C:\Program Files\UnityEditor\Packages\2d-extras-master\Runtime\Tiles\AnimatedTile" t="Include">
+      <e p="AnimatedTile.cs" t="Include" />
+    </e>
+    <e p="C:\Program Files\UnityEditor\Packages\2d-extras-master\Runtime\Tiles\HexagonalRuleTile" t="Include">
+      <e p="HexagonalRuleTile.cs" t="Include" />
+    </e>
+    <e p="C:\Program Files\UnityEditor\Packages\2d-extras-master\Runtime\Tiles\IsometricRuleTile" t="Include">
+      <e p="IsometricRuleTile.cs" t="Include" />
+    </e>
+    <e p="C:\Program Files\UnityEditor\Packages\2d-extras-master\Runtime\Tiles\PipelineTile" t="Include">
+      <e p="PipelineTile.cs" t="Include" />
+    </e>
+    <e p="C:\Program Files\UnityEditor\Packages\2d-extras-master\Runtime\Tiles\RandomTile" t="Include">
+      <e p="RandomTile.cs" t="Include" />
+    </e>
+    <e p="C:\Program Files\UnityEditor\Packages\2d-extras-master\Runtime\Tiles\RuleOverrideTile" t="Include">
+      <e p="AdvancedRuleOverrideTile.cs" t="Include" />
+      <e p="RuleOverrideTile.cs" t="Include" />
+    </e>
+    <e p="C:\Program Files\UnityEditor\Packages\2d-extras-master\Runtime\Tiles\RuleTile" t="Include">
+      <e p="RuleTile.cs" t="Include" />
+    </e>
+    <e p="C:\Program Files\UnityEditor\Packages\2d-extras-master\Runtime\Tiles\TerrainTile" t="Include">
+      <e p="TerrainTile.cs" t="Include" />
+    </e>
+    <e p="C:\Program Files\UnityEditor\Packages\2d-extras-master\Runtime\Tiles\WeightedRandomTile" t="Include">
+      <e p="WeightedRandomTile.cs" t="Include" />
+    </e>
+    <e p="C:\Users\daxxa\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\daxxa\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_AngelRunner.-1827795702.00" t="ExcludeRecursive" />
+    <e p="G:\UnityProjects\AngelRunner" t="IncludeRecursive">
+      <e p="AngelRunner.sln" t="IncludeFlat" />
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Editor" t="Include">
+          <e p="DaxDungeonGeneratorEditor.cs" t="Include" />
+          <e p="PackRoomTypeEditor.cs" t="Include" />
+          <e p="PatronEditor.cs" t="Include" />
+          <e p="PatronGenLayoutEditor.cs" t="Include" />
+          <e p="PatronPackRoomEditor.cs" t="Include" />
+          <e p="TileRoomEditor.cs" t="Include" />
+          <e p="TileRoomTypeEditor.cs" t="Include" />
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="DaxController" t="Include">
+            <e p="AnimationController.cs" t="Include" />
+            <e p="CameraFollow.cs" t="Include" />
+            <e p="Controller2D.cs" t="Include" />
+            <e p="PlatformController.cs" t="Include" />
+            <e p="PlayerInputEvents.cs" t="Include" />
+            <e p="PlayerMovement.cs" t="Include" />
+            <e p="PlayerState.cs" t="Include" />
+            <e p="RaycastController.cs" t="Include" />
+          </e>
+          <e p="DaxDungeonGenerator" t="Include">
+            <e p="DaxDungeonGenerator.cs" t="Include" />
+            <e p="Generator" t="Include">
+              <e p="GenLayout" t="Include">
+                <e p="GenLayout.cs" t="Include" />
+                <e p="GenLayoutInterface.cs" t="Include" />
+                <e p="GenLayoutType.cs" t="Include" />
+              </e>
+              <e p="PackRoom" t="Include">
+                <e p="PackRoom.cs" t="Include" />
+                <e p="PackRoomType.cs" t="Include" />
+              </e>
+              <e p="Room" t="Include">
+                <e p="TileRoom.cs" t="Include" />
+                <e p="TileRoomType.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Patrons" t="Include">
+              <e p="LayoutPatron" t="Include">
+                <e p="GenLayoutPatron.cs" t="Include" />
+              </e>
+              <e p="PackRoomPatron" t="Include">
+                <e p="PackRoomPatron.cs" t="Include" />
+              </e>
+              <e p="RoomPatron" t="Include">
+                <e p="RoomPatron.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+      <e p="Unity.2D.Tilemap.Extras.csproj" t="IncludeRecursive" />
+      <e p="Unity.2D.Tilemap.Extras.Editor.csproj" t="IncludeRecursive" />
+    </e>
+  </component>
+</project>
