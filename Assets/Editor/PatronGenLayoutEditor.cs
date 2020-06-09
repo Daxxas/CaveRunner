@@ -18,5 +18,11 @@ public class PatronGenLayoutEditor : Editor
         {
             genLayoutPatron.GenerateLayout();
         }
+        if (GUILayout.Button("Destroy children")) 
+        {
+            foreach (Transform child in genLayoutPatron.transform) {
+                GameObject.DestroyImmediate(child.gameObject);
+            }
+        }
     }
 }

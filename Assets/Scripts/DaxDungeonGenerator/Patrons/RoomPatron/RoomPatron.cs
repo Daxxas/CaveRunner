@@ -11,18 +11,25 @@ public class RoomPatron : MonoBehaviour
     public TileRoomType patronRoomType;
     
     private List<GameObject> tileRooms = new List<GameObject>();
+    private List<Vector3Int> generatedRoomDoors = new List<Vector3Int>();
+    private bool generatedHasStartposition;
+    private Vector3Int generatedStartposition;
+    private TileBase[] generatedRoomTiles;
+    private BoundsInt generatedBoundsInt;
 
-    private GameObject mainMapGO;
-    private Grid mainGrid;
-    private DaxDungeonGenerator dungeonGenerator;
+    public List<Vector3Int> GeneratedRoomDoors => generatedRoomDoors;
+    public bool GeneratedHasStartposition => generatedHasStartposition;
+    public Vector3Int GeneratedStartposition => generatedStartposition;
+    public TileBase[] GeneratedRoomTiles => generatedRoomTiles;
+    
+    
+    public Grid mainGrid;
 
     public void Awake()
     {
         tileRooms = Resources.LoadAll<GameObject>("Rooms/" + patronRoomType.name).ToList();
         
-        mainMapGO = GameObject.FindWithTag("MainGrid").gameObject;
-        mainGrid = mainMapGO.GetComponent<Grid>();
-        dungeonGenerator = mainMapGO.transform.GetChild(0).GetComponent<DaxDungeonGenerator>();
+        mainGrid = GetComponentInParent<Grid>();
     }
 
     
@@ -31,12 +38,29 @@ public class RoomPatron : MonoBehaviour
         Awake();
     }
 
-    public void GenerateRoom()
+    public void PickRandomRoom()
     {
         int rand = Random.Range(0, tileRooms.Count);
-        
-;       dungeonGenerator.placeTileRoom(GetPatronGridPos(), tileRooms[rand].GetComponent<TileRoom>());
+
+        if (tileRooms.Count > 0)
+        {
+            TileRoom room = tileRooms[rand].GetComponent<TileRoom>();
+            SetPatronInfosFromRoomInfos(room);
+        }
+        else
+        {
+            print("No room found for room type " + patronRoomType.name);
+        }
     }
+    
+    private void SetPatronInfosFromRoomInfos(TileRoom room)
+    {
+        generatedRoomDoors = room.tileRoomType.door.ToList();
+        generatedStartposition = room.tileRoomType.startPosition;
+        generatedHasStartposition = room.tileRoomType.hasStartposition;
+        generatedRoomTiles = room.GetGroundTiles();
+    }
+    
     
     private void OnDrawGizmos()
     {
@@ -54,8 +78,8 @@ public class RoomPatron : MonoBehaviour
         }
     }
 
-    private Vector3Int GetPatronGridPos()
+    public BoundsInt GetPatronBounds()
     {
-        return mainGrid.WorldToCell(transform.position);
+        return new BoundsInt(mainGrid.WorldToCell(transform.position), patronRoomType.RoomBounds.size);
     }
 }

@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Editor\DaxDungeonGeneratorEditor.cs" />
+     <Compile Include="Assets\Editor\GenLayoutEditor.cs" />
      <Compile Include="Assets\Editor\GenLayoutTypeEditor.cs" />
      <Compile Include="Assets\Editor\PatronEditor.cs" />
      <Compile Include="Assets\Editor\PatronGenLayoutEditor.cs" />

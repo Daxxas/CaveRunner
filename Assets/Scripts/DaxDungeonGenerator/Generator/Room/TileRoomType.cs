@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEditor;
 using UnityEngine;
+using UnityEditor;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
 
@@ -12,6 +13,8 @@ public class TileRoomType : ScriptableObject
 {
     public BoundsInt RoomBounds;
     public Vector3Int[] door;
+    public bool hasStartposition;
+    public Vector3Int startPosition;
 
     public void CheckAndCreateDir()
     {
@@ -23,6 +26,16 @@ public class TileRoomType : ScriptableObject
         {
             AssetDatabase.CreateFolder("Assets/Resources/Rooms", this.name);
         }
+        if (!AssetDatabase.IsValidFolder("Assets/Resources/RoomTypes")) 
+        {
+            AssetDatabase.CreateFolder("Assets/Resources", "RoomTypes");
+        }
+    }
+
+    public static GameObject GetBaseTileRoom()
+    {
+        return Resources.Load<GameObject>("TypeRoomBase/TypeRoomBase");
     }
 }
+
 

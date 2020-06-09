@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6dc39d1f-a40b-426f-82cb-0b5661b7e570" name="Default Changelist" comment="" />
+    <list default="true" id="6dc39d1f-a40b-426f-82cb-0b5661b7e570" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AngelRunner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AngelRunner/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1cuf2M6sTRHCLtLAGopkenN9yUY" />
   <component name="ProjectViewState">
@@ -29,10 +34,17 @@
       <option name="presentableId" value="Default" />
       <updated>1591383192449</updated>
       <workItem from="1591383198306" duration="36000" />
+      <workItem from="1591627956630" duration="53000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="342" y="206" key="new project wizard" timestamp="1591628006864">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="342" y="206" key="new project wizard/0.0.1920.1080/-1920.0.1920.1080/1920.240.1920.1040@0.0.1920.1080" timestamp="1591628006864" />
   </component>
 </project>
