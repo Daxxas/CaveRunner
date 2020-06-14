@@ -14,13 +14,13 @@ public class RoomPatron : MonoBehaviour
     private List<Vector3Int> generatedRoomDoors = new List<Vector3Int>();
     private bool generatedHasStartposition;
     private Vector3Int generatedStartposition;
-    private TileBase[] generatedRoomTiles;
+    [SerializeField] private TileRoom generatedTileRoom;
     private BoundsInt generatedBoundsInt;
 
     public List<Vector3Int> GeneratedRoomDoors => generatedRoomDoors;
     public bool GeneratedHasStartposition => generatedHasStartposition;
     public Vector3Int GeneratedStartposition => generatedStartposition;
-    public TileBase[] GeneratedRoomTiles => generatedRoomTiles;
+    public TileRoom GeneratedTileRoom => generatedTileRoom;
     
     
     public Grid mainGrid;
@@ -58,7 +58,7 @@ public class RoomPatron : MonoBehaviour
         generatedRoomDoors = room.tileRoomType.door.ToList();
         generatedStartposition = room.tileRoomType.startPosition;
         generatedHasStartposition = room.tileRoomType.hasStartposition;
-        generatedRoomTiles = room.GetGroundTiles();
+        generatedTileRoom = room;
     }
     
     

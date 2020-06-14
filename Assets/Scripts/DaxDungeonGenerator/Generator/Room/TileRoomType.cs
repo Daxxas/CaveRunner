@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.IO;
-using UnityEditor;
+﻿using UnityEditor;
 using UnityEngine;
-using UnityEditor;
-using UnityEngine.Tilemaps;
-using UnityEngine.UI;
 
 [CreateAssetMenu(fileName = "New TileRoom", menuName = "TileRoom Type")]
 public class TileRoomType : ScriptableObject

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -10,11 +11,13 @@ public class TileRoom : MonoBehaviour
     public TileRoomType tileRoomType;
     private Grid grid;
     private bool errorCatched;
+    private List<MonsterSpawner> monsterSpawners;
     
     void Start()
     {
         grid = GetComponent<Grid>();
         errorCatched = false;
+        monsterSpawners = GetComponentsInChildren<MonsterSpawner>().ToList();
     }
     
     private void OnValidate()
@@ -22,9 +25,39 @@ public class TileRoom : MonoBehaviour
         Start();
     }
 
+    public List<MonsterSpawner> GetMonsters()
+    {
+        return monsterSpawners;
+    }
+    
     public String GetRoomType()
     {
         return tileRoomType.name;
+    }
+
+    public GameObject GetExitDoor()
+    {
+        
+        ExitDoor exitDoor = GetComponentInChildren<ExitDoor>();
+
+        if (exitDoor != null)
+        {
+            return exitDoor.gameObject;
+        }
+
+        return null;
+    }
+
+    public GameObject GetStartPosition()
+    {
+        StartPosition startPosition = GetComponentInChildren<StartPosition>();
+
+        if (startPosition != null)
+        {
+            return startPosition.gameObject;
+        }
+
+        return null;
     }
 
     public Vector3Int GetStartPoints()

@@ -29,42 +29,43 @@ public class CameraFollow : MonoBehaviour
 
     private void LateUpdate()
     {
-        focusArea.Update(target.GetComponent<Collider2D>().bounds);
-        Vector2 focusPosition = focusArea.center + Vector2.up * verticalOffset;
-
-        if (focusArea.velocity.x != 0)
+        if (target != null)
         {
-            lookAheadDirX = Mathf.Sign(focusArea.velocity.x);
-            if (Mathf.Sign(target.playerInput.x) == Mathf.Sign(focusArea.velocity.x) && target.playerInput.x != 0)
+            focusArea.Update(target.GetComponent<Collider2D>().bounds);
+            Vector2 focusPosition = focusArea.center + Vector2.up * verticalOffset;
+
+            if (focusArea.velocity.x != 0)
             {
-                lookAheadStopped = false;
-                targetLookAheadX = lookAheadDirX * lookAheadDstX;
-            }
-            else
-            {
-                if (!lookAheadStopped)
+                lookAheadDirX = Mathf.Sign(focusArea.velocity.x);
+                if (Mathf.Sign(target.playerInput.x) == Mathf.Sign(focusArea.velocity.x) && target.playerInput.x != 0)
                 {
-                    lookAheadStopped = true;
-                    targetLookAheadX = currentLookAheadX + (lookAheadDirX * lookAheadDstX - currentLookAheadX)/4f;
+                    lookAheadStopped = false;
+                    targetLookAheadX = lookAheadDirX * lookAheadDstX;
+                }
+                else
+                {
+                    if (!lookAheadStopped)
+                    {
+                        lookAheadStopped = true;
+                        targetLookAheadX = currentLookAheadX + (lookAheadDirX * lookAheadDstX - currentLookAheadX)/4f;
+                    }
                 }
             }
+
+        
+            currentLookAheadX = Mathf.SmoothDamp(currentLookAheadX, targetLookAheadX, ref smoothLookVelocityX, horizontalSmoothTime);
+
+            focusPosition.y = Mathf.SmoothDamp(transform.position.y, focusPosition.y, ref smoothVelocityY, verticalSmoothTime);
+            focusPosition += Vector2.right * currentLookAheadX;
+        
+            transform.position = (Vector3) focusPosition + Vector3.forward * -10;
         }
-
-        
-        currentLookAheadX = Mathf.SmoothDamp(currentLookAheadX, targetLookAheadX, ref smoothLookVelocityX, horizontalSmoothTime);
-
-        focusPosition.y = Mathf.SmoothDamp(transform.position.y, focusPosition.y, ref smoothVelocityY, verticalSmoothTime);
-        focusPosition += Vector2.right * currentLookAheadX;
-        
-        transform.position = (Vector3) focusPosition + Vector3.forward * -10;
-
-        
     }
 
     private void OnDrawGizmos()
     {
         Gizmos.color = new Color(1, 0, 0, .5f);
-        Gizmos.DrawCube(focusArea.center, focusAreaSize);
+        Gizmos.DrawCube(focusArea.center + (Vector2) transform.position, focusAreaSize);
     }
 
     struct FocusArea

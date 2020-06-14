@@ -11,15 +11,25 @@ public class DaxDungeonGenerator : MonoBehaviour
     private Tilemap mainTilemap;
     
     [SerializeField] private String finalLayer;
-    [SerializeField] private GameObject mainLayoutPatronPrefab;
+    public GameObject mainLayoutPatronPrefab;
     private GameObject patronOfSelectedLayoutGO;
+    private Grid mainGrid;
+    public int expandOffset = 16;
+    public TileBase groundTile;
+    public GameObject mainCharacter;
     
+    [Header("Debug")] 
+    public TileRoomType debugTileRoomType;
+    public GameObject debugTileRoomGO;
+
     public Tilemap MainTilemap => mainTilemap;
     public GameObject PatronOfSelectedLayoutGO => patronOfSelectedLayoutGO;
     
     void Start()
     {
         mainTilemap = GetComponentInChildren<TilemapCollider2D>().gameObject.GetComponent<Tilemap>();
+        mainGrid = GetComponent<Grid>();
+        mainCharacter = GameObject.FindWithTag("Player");
     }
 
     private void OnValidate()
@@ -35,30 +45,118 @@ public class DaxDungeonGenerator : MonoBehaviour
         patronOfSelectedLayoutGO  = Instantiate(mainLayoutPatronPrefab, transform);
         GenLayoutPatron layoutPatronOfSelectedLayout = patronOfSelectedLayoutGO.GetComponent<GenLayoutPatron>();
         layoutPatronOfSelectedLayout.genLayoutType = genLayouts[rand].GetComponent<GenLayout>().genLayoutType;
-        layoutPatronOfSelectedLayout.Awake();
-        layoutPatronOfSelectedLayout.GenerateLayout(); //On prend le layout sélectionné et on le réveille
-        
-        
-        GenerateRoomPatron(layoutPatronOfSelectedLayout.roomPatrons); //On demande au layout actuel de générer ses salles
-        
-        foreach (GenLayoutPatron layoutPatron in layoutPatronOfSelectedLayout.subLayouts) //On demande aux sous layouts de générer leurs salles
+        layoutPatronOfSelectedLayout.Awake(); //On prend le layout sélectionné et on le réveille
+
+        BoundsInt expandedLayout = ExpandLayout(layoutPatronOfSelectedLayout.genLayoutType.layoutBounds);
+
+        mainTilemap.SetTile(new Vector3Int(expandedLayout.xMax, expandedLayout.yMax, expandedLayout.z), groundTile); //On place une tile dans le coin sinon la box ne fill pas correctement
+        mainTilemap.BoxFill(expandedLayout.position, groundTile, expandedLayout.xMin, expandedLayout.yMin, 200, 200);
+        CascadeGenerateLayout(layoutPatronOfSelectedLayout);
+
+        mainCharacter.transform.position = GetComponentInChildren<StartPosition>().transform.position;
+    }
+
+    private void CascadeGenerateLayout(GenLayoutPatron genLayoutPatron)
+    {
+        genLayoutPatron.GenerateLayout();
+        GenerateRoomPatron(genLayoutPatron.roomPatrons); 
+        foreach (GenLayoutPatron layoutPatron in genLayoutPatron.subLayouts)
         {
-            //TO DO : Supporter des sous-layout infini, pour l'instant ça ne supporte pas les sous-sous layout
             GenerateRoomPatron(layoutPatron.roomPatrons);
+            
+            if (layoutPatron.subLayouts.Count > 0)
+            {
+                CascadeGenerateLayout(layoutPatron);
+            }
         }
     }
 
-    private void GenerateRoomPatron(List<RoomPatron> roomPatrons)
+    public void GenerateRoomPatron(List<RoomPatron> roomPatrons)
     {
         foreach (RoomPatron roomPatron in roomPatrons)
         {
-            PlaceTileRoom(roomPatron.GetPatronBounds(), roomPatron.GeneratedRoomTiles);
-            //récupérer d'autres infos ici
+            GenerateTileRoom(roomPatron.transform.position, roomPatron.GeneratedTileRoom);
         }
     }
 
-    private void PlaceTileRoom(BoundsInt bounds, TileBase[] tileArray)
+    public void GenerateTileRoom(Vector3 pos, TileRoom tileRoom)
     {
-        mainTilemap.SetTilesBlock(bounds, tileArray);
+        PlaceTileRoom(PosToCellPos(pos), tileRoom);
+
+        foreach (MonsterSpawner monsterSpawner in tileRoom.GetMonsters())
+        {
+            PlaceMonsterSpawner(monsterSpawner, pos);
+        }
+
+        if (tileRoom.GetExitDoor() != null)
+        {
+            Instantiate(tileRoom.GetExitDoor(), pos + tileRoom.GetExitDoor().transform.position, transform.rotation,  transform);
+        }
+        
+        if (tileRoom.GetStartPosition() != null)
+        {
+            Instantiate(tileRoom.GetStartPosition(), pos + tileRoom.GetStartPosition().transform.position, transform.rotation,  transform);
+        }
+
+        //Générer les autres choses ici
     }
+
+    private void PlaceTileRoom(Vector3Int pos, TileRoom tileRoom)
+    {
+        BoundsInt patronBounds = new BoundsInt(pos, tileRoom.tileRoomType.RoomBounds.size);
+        mainTilemap.SetTilesBlock(patronBounds, tileRoom.GetGroundTiles());
+    }
+
+    private void PlaceMonsterSpawner(MonsterSpawner monsterSpawner, Vector3 patronPos)
+    {
+        Instantiate(monsterSpawner,patronPos + monsterSpawner.Position, transform.rotation, transform);
+    }
+
+    public Vector3Int PosToCellPos(Vector3 pos)
+    {
+        return mainGrid.WorldToCell(pos);
+    }
+
+    private BoundsInt ExpandLayout(BoundsInt layoutBounds)
+    {
+        BoundsInt expandedBounds = new BoundsInt(new Vector3Int(layoutBounds.x, layoutBounds.y, layoutBounds.z), layoutBounds.size);
+
+        expandedBounds.xMin -= expandOffset;
+        expandedBounds.yMin -= expandOffset;
+        expandedBounds.xMax += expandOffset;
+        expandedBounds.yMax += expandOffset;
+        return expandedBounds;
+
+    }
+    
+    public void ResetDungeon()
+    {
+        MainTilemap.ClearAllTiles();
+        DestroyImmediate(PatronOfSelectedLayoutGO);
+        foreach (GenLayoutPatron genLayoutPatron in GetComponentsInChildren<GenLayoutPatron>())
+        {
+            DestroyImmediate(genLayoutPatron.gameObject);
+        }
+            
+        foreach (RoomPatron roomPatron in GetComponentsInChildren<RoomPatron>())
+        {
+            DestroyImmediate(roomPatron.gameObject);
+        }
+            
+        foreach (MonsterSpawner monsterSpawner in GetComponentsInChildren<MonsterSpawner>())
+        {
+            DestroyImmediate(monsterSpawner.gameObject);
+        }
+
+        foreach (ExitDoor exitDoor in GetComponentsInChildren<ExitDoor>())
+        {
+            DestroyImmediate(exitDoor.gameObject);
+        }
+            
+        foreach (StartPosition startPosition in GetComponentsInChildren<StartPosition>())
+        {
+            DestroyImmediate(startPosition.gameObject);
+        }
+    }
+    
 }

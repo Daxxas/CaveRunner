@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof (PlayerMovement))]
+[RequireComponent(typeof (PlayerController))]
 [RequireComponent(typeof(PlayerInput))]
 public class PlayerInputEvents : MonoBehaviour
 {
@@ -31,17 +31,35 @@ public class PlayerInputEvents : MonoBehaviour
         set => jumpRelease = value;
     }
 
+    private bool attack;
 
+    public bool Attack
+    {
+        get => attack;
+        set => attack = value;
+    }
+
+    private bool action;
+    
+    public bool Action
+    {
+        get => action;
+        set => action = value;
+    }
+    
     private void LateUpdate()
     {
         InputReset();
     }
-
+    
     public void InputReset()
     {
         jumpPress = false;
         jumpRelease = false;
+        attack = false;
+        action = false;
     }
+    
     
     void OnMovement(InputValue inputValue)
     {
@@ -56,5 +74,15 @@ public class PlayerInputEvents : MonoBehaviour
     void OnJumpRelease(InputValue inputValue)
     {
         jumpRelease = true;
+    }
+
+    void OnAttack(InputValue inputValue)
+    {
+        attack = true;
+    }
+
+    void OnAction(InputValue inputValue)
+    {
+        action = true;
     }
 }

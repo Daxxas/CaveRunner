@@ -7,10 +7,8 @@ using UnityEngine.Tilemaps;
 public class TileRoomEditor : Editor
 {
     bool showTypeEditor = true;
-
     public override void OnInspectorGUI()
     {
-        
         base.OnInspectorGUI();
         GUILayout.Space(20f);
         TileRoom tileRoom = (TileRoom) target;

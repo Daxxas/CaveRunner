@@ -1,60 +1,81 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using playerState;
+using characterState;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(Animator))]
 public class AnimationController : MonoBehaviour
 {
     // Start is called before the first frame update
-    private PlayerMovement playerMovement;
-    private PlayerInputEvents playerInput;
+    private CharacterController characterController;
+    private CharacterCombat characterCombat;
+    private PlayerInputEvents playerInputs;
     private Animator animator;
     private SpriteRenderer sprite;
-    
+
+    private bool hasCombatComponent = false;
     private bool FacingRight = true;
+
+    public AnimatorStateInfo currentAnimation;
     void Start()
     {
-        playerMovement = GetComponent<PlayerMovement>();
-        playerInput = GetComponent<PlayerInputEvents>();
+        characterController = GetComponent<CharacterController>();
+        if (TryGetComponent<CharacterCombat>(out characterCombat))
+        {
+            hasCombatComponent = true;
+        }
+        playerInputs = GetComponent<PlayerInputEvents>();
         animator = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
+        
     }
 
     void Update()
     {
+        if (characterController.Velocity.x > 0 && !FacingRight)
+        {
+            Flip();
+        }
+        else if (characterController.Velocity.x < 0 && FacingRight)
+        {
+            Flip();
+        }
+
+        if (hasCombatComponent)
+        {
+            if (characterCombat.engageAttack)
+            {
+                animator.SetTrigger("Attacking");
+                characterCombat.engageAttack = false;
+            }
+            
+            if (characterCombat.gotHit)
+            {
+                animator.SetTrigger("Hitten");
+                characterCombat.gotHit = false;
+            }
+
+            if (characterCombat.isDead)
+            {
+                animator.SetTrigger("Dead");
+                characterCombat.isDead = false;
+            }
+        }
         
-        if (playerInput.Input.x > 0 && !FacingRight)
-        {
-            // ... flip the player.
-            Flip();
-        }
-        // Otherwise if the input is moving the player left and the player is facing right...
-        else if (playerInput.Input.x < 0 && FacingRight)
-        {
-            // ... flip the player.
-            Flip();
-        }
-
-        animator.SetFloat("VelocityX", Mathf.Abs(playerInput.Input.x));
-        animator.SetFloat("VelocityY", playerMovement.Velocity.y);
-        animator.SetBool("TouchingGround", playerMovement.Controller.collisions.below);
-        animator.SetBool("TouchingWall", playerMovement.Controller.collisions.left ||playerMovement.Controller.collisions.right);
-
-
+        animator.SetFloat("VelocityX", Mathf.Abs(characterController.Velocity.x));
+        animator.SetFloat("VelocityY", characterController.Velocity.y);
+        animator.SetBool("TouchingGround", characterController.Controller.collisions.below);
+        animator.SetBool("TouchingWall", characterController.Controller.collisions.left || characterController.Controller.collisions.right);
+        
+        currentAnimation = animator.GetCurrentAnimatorStateInfo(0);
 
     }
 
     private void Flip()
     {
-        // Switch the way the player is labelled as facing.
         sprite.flipX = FacingRight;
         FacingRight = !FacingRight;
-
-        // Multiply the player's x local scale by -1.
-        /*Vector3 theScale = transform.localScale;
-        theScale.x *= -1;
-        transform.localScale = theScale;*/
     }
     
 }
