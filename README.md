@@ -10,9 +10,9 @@ Tous les niveaux sont générés de manière semi-procédurale.
 # Preview
 
 Jouez-y ici : https://adaxxas.itch.io/caverunner
+Video : https://www.youtube.com/watch?v=FATOTFpnCJ0
 
 ![preview1](https://i.imgur.com/bt9lisE.png)
 
 ![preview2](https://i.imgur.com/YGKvb0d.png)
 
-![preview3](https://www.youtube.com/watch?v=FATOTFpnCJ0&feature=youtu.be)
